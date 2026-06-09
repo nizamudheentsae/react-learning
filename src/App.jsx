@@ -1,11 +1,10 @@
-
 import "./App.css";
-import CustomerList from "./CustomerList";
+import ClickCounter from "./ClickCounter";
 
 function App() {
   return (
     <div>
-      <CustomerList/>
+      <ClickCounter />
     </div>
   );
 }
