@@ -1,14 +1,11 @@
-import ProfileCard from "./ProfileCard";
+
 import "./App.css";
+import CustomerList from "./CustomerList";
 
 function App() {
   return (
     <div>
-      <ProfileCard name="Nizamudheen" job="MERN Developer" city="Dubai" />
-
-      <ProfileCard name="Ahmed" job="Accountant" city="Sharjah" />
-
-      <ProfileCard name="Ali" job="Designer" city="Abu Dhabi" />
+      <CustomerList/>
     </div>
   );
 }
