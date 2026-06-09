@@ -1,10 +1,13 @@
 import "./App.css";
-import ClickCounter from "./ClickCounter";
+import Counter from "./Counter";
+
 
 function App() {
   return (
     <div>
-      <ClickCounter />
+      
+
+      <Counter/>
     </div>
   );
 }
