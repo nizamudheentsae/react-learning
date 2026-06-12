@@ -17,9 +17,9 @@ function Counter () {
         <div className="container mx-auto mt-5 align-between">
             <h1>Count: {count}</h1>
 
-            <button className="btn ml-2 px-4 py-2" onClick={handleClick}> Increase</button>
-            <button className="btn ml-2 px-4 py-2" onClick={handleClick2}> Decrease</button>
-            <button className="btn ml-2 px-4 py-2" onClick={() => setCount(0)}>Reset</button>
+            <button  onClick={handleClick}> Increase</button>
+            <button  onClick={handleClick2}> Decrease</button>
+            <button  onClick={() => setCount(0)}>Reset</button>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import "./App.css";
-import Counter from "./Counter";
+import NameForm from "./NameForm";
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div>
       
 
-      <Counter/>
+      <NameForm/>
     </div>
   );
 }
