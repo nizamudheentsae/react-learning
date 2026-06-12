@@ -1,5 +1,5 @@
 import "./App.css";
-import NameForm from "./NameForm";
+import LoginStatus from "./LoginStatus";
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div>
       
 
-      <NameForm/>
+      <LoginStatus/>
     </div>
   );
 }
