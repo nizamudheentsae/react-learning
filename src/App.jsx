@@ -1,12 +1,25 @@
 import "./App.css";
-import TodoApp from "./TodoApp";
+import DashboardCard from "./DashboardCard";
+
 
 
 function App() {
   return (
     <div>
       
-    <TodoApp/>
+      <h1>UAE Finanace Dashboard</h1>
+
+      <DashboardCard
+        title = "Customers"
+        value = "25"/>
+
+        <DashboardCard
+        title = "Invoices"
+        value = "40"/>
+
+        <DashboardCard
+        title = "Revenue"
+        value = "AED 15000"/>
       
     </div>
   );
