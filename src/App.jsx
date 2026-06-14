@@ -1,13 +1,13 @@
 import "./App.css";
-import LoginStatus from "./LoginStatus";
+import EffectDemo from "./EffectDemo";
 
 
 function App() {
   return (
     <div>
       
-
-      <LoginStatus/>
+    <EffectDemo/>
+      
     </div>
   );
 }
