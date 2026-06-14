@@ -1,12 +1,12 @@
 import "./App.css";
-import EffectDemo from "./EffectDemo";
+import TodoApp from "./TodoApp";
 
 
 function App() {
   return (
     <div>
       
-    <EffectDemo/>
+    <TodoApp/>
       
     </div>
   );
