@@ -5,34 +5,56 @@ import CustomerCard from "./CustomerCard";
 function App() {
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
+  const [editingId, setEditingId] = useState(null);
 
   const [customers, setCustomers] = useState([
         { id: 1, name: "Nizam", city: "Dubai" },
     { id: 2, name: "Ali", city: "Abu Dhabi" },
   ])
 
-
+// ADD CUSTOMER
   function addCustomer () {
     if(name.trim() === "" || city.trim() === "") return;
 
-    const newCustomer = {
-      id: Date.now(),
-      name,
-      city
-    };
+    if (editingId) {
+      setCustomers (
+        customers.map((customer) => customer.id === editingId ? { ...customer,name,city} : customer )
+      );
+      setEditingId(null)
+    } else 
 
-    setCustomers([...customers, newCustomer]);
+  {const newCustomer = {
+    id: Date.now(),
+    name,
+    city
+  };
+
+  setCustomers([...customers, newCustomer])
+};
 
     setName("");
     setCity("");
   }
 
+  // UPDATE CUSTOMER
+  
+  function editCustomer(customer) {
+    setName(customer.name);
+    setCity(customer.city);
+    setEditingId(customer.id);
+  
+  
+  }
+
+
+  // DELETE CUSTOMER
   function deleteCustomer (idToDelete) {
     setCustomers (
       customers.filter((customer) => customer.id !== idToDelete )
     )
 
   }
+
 
   return (
 
@@ -68,7 +90,10 @@ function App() {
             id = {customer.id}
             name = {customer.name}
             city = {customer.city}
-            deleteCustomer = {deleteCustomer}/>
+            deleteCustomer = {deleteCustomer}
+            editCustomer={editCustomer}
+            customer={customer}
+            />
         ))}
     </div>
 

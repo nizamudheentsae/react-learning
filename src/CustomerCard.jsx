@@ -1,4 +1,4 @@
-function CustomerCard({ id, name, city, deleteCustomer }) {
+function CustomerCard({ id, name, city, deleteCustomer,editCustomer, customer }) {
   return (
     <div
       style={{
@@ -9,6 +9,8 @@ function CustomerCard({ id, name, city, deleteCustomer }) {
     >
       <h2>{name}</h2>
       <p>{city}</p>
+
+      <button onClick={() => editCustomer(customer)}>Edit</button>
 
       <button onClick={() => deleteCustomer(id)}>Delete</button>
     </div>
