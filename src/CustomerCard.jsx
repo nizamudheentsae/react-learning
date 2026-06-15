@@ -1,18 +1,19 @@
 function CustomerCard({ id, name, city, deleteCustomer,editCustomer, customer }) {
   return (
-    <div
-      style={{
-        border: "1px solid black",
-        padding: "10px",
-        margin: "10px",
-      }}
-    >
-      <h2>{name}</h2>
-      <p>{city}</p>
+    <div className="bg-white rounded shadow p-4 transition hover:shadow-lg">
+      <h2 className="text-xl text-yellow-900 font-bold">{name}</h2>
+      <p className="text-gray-600">{city}</p>
 
-      <button onClick={() => editCustomer(customer)}>Edit</button>
+      <div className="flex gap-2 justify-around mt-6 mb-3 border-amber-500 ">
 
-      <button onClick={() => deleteCustomer(id)}>Delete</button>
+      <button className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600" 
+      onClick={() => editCustomer(customer)}>Edit</button>
+
+      <button className="bg-red-500 text-white px-3 p-1 rounded ml-2 hover:bg-red-600" 
+      onClick={() => deleteCustomer(id)}>Delete</button>
+
+      </div>
+      
     </div>
   );
 }
