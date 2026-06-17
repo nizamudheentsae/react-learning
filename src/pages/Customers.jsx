@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../App.css";
 import CustomerCard from "../CustomerCard";
+import { useEffect } from "react";
 
 function Customers() {
   const [name, setName] = useState("");
@@ -8,11 +9,19 @@ function Customers() {
   const [editingId, setEditingId] = useState(null);
   const [search, setSearch] = useState("");
 
-  const [customers, setCustomers] = useState([
-    { id: 1, name: "Nizam", city: "Dubai" },
-    { id: 2, name: "Ali", city: "Abu Dhabi" },
-    { id: 3, name: "Hassan", city: "Ajman" },
-  ]);
+  const [customers, setCustomers] = useState(() => {
+    const savedCustomers = localStorage.getItem("customers");
+
+    return savedCustomers ? JSON.parse (savedCustomers) : 
+    [
+        { id: 1, name: "Nizam", city: "Dubai" },
+        { id: 2, name: "Ali", city: "Abu Dhabi" }
+      ];
+  });
+
+  useEffect (() => {
+    localStorage.setItem("customers", JSON.stringify(customers) )
+  }, [customers]);
 
   // ADD CUSTOMER
   function addCustomer() {
