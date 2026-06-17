@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../App.css";
-import CustomerCard from "../CustomerCard";
+import CustomerCard from "../components/CustomerCard";
 import { useEffect } from "react";
 
 function Customers() {
